@@ -12,8 +12,12 @@ const {width,height}  = Dimensions.get('window');
 const guidelineBaseWidth  = 350;
 const guidelineBaseHeight = 680;
 
+//use to scale width
 const scale = size  =>  width / guidelineBaseWidth  * size;
+//use to scale height
 const verticalScale = size  =>  height  / guidelineBaseHeight * size;
+
+//like textsize, etc
 const moderateScale = (size,  factor  = 0.5)  =>  size  + ( scale(size) - size) * factor;
 
 export  default class App extends React.Component{
